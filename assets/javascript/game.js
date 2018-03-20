@@ -25,7 +25,7 @@ function startGame() {
   selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
   lettersInChosenWord = selectedWord.split("");
   numBlanks = lettersInChosenWord.length;
-  console.log(chosenWord);
+  console.log(selectedWord);
 
   
   blanksAndSuccesses = [];
@@ -51,7 +51,7 @@ function checkLetters(letter) {
 
   for (var i = 0; i < numBlanks; i++) {
 
-    if (chosenWord[i] === letter) {
+    if (selectedWord[i] === letter) {
       letterInWord = true;
     }
   }
@@ -60,7 +60,7 @@ function checkLetters(letter) {
 
 
     for (var j = 0; j < numBlanks; j++) {
-      if (chosenWord[j] === letter) {
+      if (selectedWord[j] === letter) {
         blanksAndSuccesses[j] = letter;
       }
     }
@@ -119,3 +119,4 @@ document.onkeyup = function(event) {
 
   roundComplete();
 };
+
